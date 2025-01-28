@@ -101,7 +101,7 @@
 
                     <!-- Authentication -->
                     <x-responsive-nav-link :href="route('posts.create')">
-                        {{ __('create post') }}
+                        {{ __('Create Post') }}
                     </x-responsive-nav-link>
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
