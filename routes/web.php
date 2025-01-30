@@ -5,6 +5,8 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.detail');
+
 Route::get('/', [PostController::class, 'index'])
     ->name('root');
 
@@ -30,3 +32,5 @@ Route::resource('posts.comments', CommentController::class)
     ->middleware('auth');
 
 require __DIR__ . '/auth.php';
+
+
