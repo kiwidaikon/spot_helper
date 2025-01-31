@@ -6,7 +6,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('posts/datail', function () {
-    return view('posts.detail');
+    return view('posts.detail')->name('posts.detail');
 });
 
 
