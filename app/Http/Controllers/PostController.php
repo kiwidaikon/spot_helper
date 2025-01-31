@@ -166,6 +166,11 @@ class PostController extends Controller
         return redirect()->route('posts.index')
             ->with('notice', '依頼を削除しました');
     }
+
+public function detail()
+    {
+        return view('posts.detail');}
+
     private static function createFileName($file)
     {
         return date('YmdHis') . '_' . $file->getClientOriginalName();

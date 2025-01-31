@@ -5,7 +5,14 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.detail');
+Route::get('posts/datail', function () {
+    return view('posts.detail');
+});
+
+
+// Route::get('/posts/{id}', function ($id) {
+//     return view('posts.detail', ['id' => $id]);
+// })->name('posts.detail');
 
 Route::get('/', [PostController::class, 'index'])
     ->name('root');

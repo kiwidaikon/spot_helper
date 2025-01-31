@@ -32,7 +32,7 @@
                      <a href="{{ route('posts.detail', $post) }}"
                          class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-20 mr-2">詳細</a>
                  @endcan
-                 @cannot('detail', $post)
+                 @cannot('posts.index', $post)
                  @endcannot
              @endauth
          </div>
